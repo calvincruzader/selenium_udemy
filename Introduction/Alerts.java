@@ -1,20 +1,25 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DynamicDropdown {
+public class Alerts {
+
 	public static void main(String[] args) throws InterruptedException { 
 		System.setProperty("webdriver.chrome.driver", "C:\\devl\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.spicejet.com");
+		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php#");
 		
-		driver.findElement(By.cssSelector("#ctl00_mainContent_ddl_originStation1_CTXT")).click();
+		driver.findElement(By.xpath("//input[@value='Confirmation Alert']")).click();
+				
+		Thread.sleep(6000);
 		
-		// Lookee here! 
-		driver.findElement(By.cssSelector("a[value='HYD']")).click();
-		driver.findElement(By.xpath("(//a[@value='HYD'])[1]")).click();
-		
+//		driver.switchTo().alert().accept();
+//		Thread.sleep(6000);
+//		a.accept(); 
+//		
+//		Thread.sleep(6000);
 		driver.close();
 	}
 }

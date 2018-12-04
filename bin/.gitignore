@@ -1,9 +1,11 @@
 /.classpath
 /.project
 /.settings/
-/bin/
-/src/
-/GetWebElementViaAncestor.class
-/SelectorSyntax.class
+/Assignment1.class
 /Dropdown.class
 /DynamicDropdown.class
+/GetWebElementViaAncestor.class
+/SelectorSyntax.class
+/bin/
+/Buttons.class
+/Alerts.class

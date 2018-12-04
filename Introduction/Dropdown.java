@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Dropdown {
 	public static void main(String[] args) throws InterruptedException { 
-		System.setProperty("webdriver.chrome.driver", "/Users/calvincruzada/devl/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\devl\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.expedia.com");
@@ -19,19 +19,12 @@ public class Dropdown {
 		Select s = new Select(depDropdownSelect);		
 
 		s.selectByIndex(2);
-		
-		Thread.sleep(3000);
-		
 		s.selectByValue("b");
-		
-		Thread.sleep(3000);
-		
 		s.selectByVisibleText("First class");
 		
-		Thread.sleep(3000);
+		System.out.println(driver.findElement(By.xpath("//option[@value='f']")).isSelected());
 		
 		driver.close();
-		
 		
 	}
 }
